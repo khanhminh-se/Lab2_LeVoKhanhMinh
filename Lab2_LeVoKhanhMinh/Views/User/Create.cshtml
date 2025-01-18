@@ -1,0 +1,29 @@
+@model Lab2_LeVoKhanhMinh.Models.User
+
+@{
+    ViewBag.Title = "Create User";
+    Layout = "_Layout";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="container">
+    <form asp-controller="User" method="post" asp-action="Create">
+        <div class="form-group">
+            <label for="FullName">Full Name</label>
+            <input type="text" class="form-control" id="FullName" asp-for="FullName" name="FullName"  required>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" class="form-control" id="Email"  asp-for="Email" name="Email"  required>
+        </div>
+        <div class="form-group">
+            <label for="PhoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="PhoneNumber" asp-for="PhoneNumber" name="PhoneNumber"  required>
+        </div>
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-success">Create User</button>
+            <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>

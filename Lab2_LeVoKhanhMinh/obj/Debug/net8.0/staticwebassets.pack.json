@@ -25,8 +25,16 @@
       "PackagePath": "staticwebassets/images/cat-02.jpg"
     },
     {
+      "Id": "/home/khanh-minh/Documents/RiderProjects/CodingPracticeProject/DemoProjects/Lab2_LeVoKhanhMinh/Lab2_LeVoKhanhMinh/wwwroot/images/laptop-1.jpeg",
+      "PackagePath": "staticwebassets/images/laptop-1.jpeg"
+    },
+    {
       "Id": "/home/khanh-minh/Documents/RiderProjects/CodingPracticeProject/DemoProjects/Lab2_LeVoKhanhMinh/Lab2_LeVoKhanhMinh/wwwroot/images/phone-category-image.jpeg",
       "PackagePath": "staticwebassets/images/phone-category-image.jpeg"
+    },
+    {
+      "Id": "/home/khanh-minh/Documents/RiderProjects/CodingPracticeProject/DemoProjects/Lab2_LeVoKhanhMinh/Lab2_LeVoKhanhMinh/wwwroot/images/phone.jpeg",
+      "PackagePath": "staticwebassets/images/phone.jpeg"
     },
     {
       "Id": "/home/khanh-minh/Documents/RiderProjects/CodingPracticeProject/DemoProjects/Lab2_LeVoKhanhMinh/Lab2_LeVoKhanhMinh/wwwroot/js/bootstrap.min.js",

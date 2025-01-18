@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/css/style.css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
@@ -31,11 +31,16 @@
                 <a asp-controller="DeviceCategory" asp-action="Create"><span class="fa fa-sticky-note mr-3"></span>Add Category</a>
             </li>
             <li>
-                <a asp-controller="Device" asp-action="Index"><span class="fa fa-sticky-note mr-3"></span>View Books</a>
+                <a asp-controller="Device" asp-action="Index"><span class="fa fa-sticky-note mr-3"></span>Devices</a>
             </li>
             <li>
-                <a  asp-controller="Device" asp-action="Create"><span class="fa fa-paper-plane mr-3"></span>Add Book</a>
+                <a  asp-controller="Device" asp-action="Create"><span class="fa fa-paper-plane mr-3"></span>Add Device</a>
             </li>
+            <li>
+                <a asp-controller="DeviceCategory" asp-action="DevicesByCategory"><span class="fa fa-sticky-note mr-3"></span>Devices By Category</a>
+            </li>
+           
+           
         </ul>
 
     </nav>

@@ -122,5 +122,26 @@ public class DeviceCategoryController : Controller
        }
         return RedirectToAction(nameof(Index));
     }
+
+
+    [HttpGet]
+    public IActionResult DevicesByCategory(int? deviceCategoryId)
+    {
+        if (deviceCategoryId == null)
+        {
+            ViewBag.categories = _context.DeviceCategories.ToList();
+        }
+        else
+        {
+            var category = _context.DeviceCategories.Include(d => d.Devices)
+                .FirstOrDefault(d => d.Id == deviceCategoryId);
+            ViewBag.categories = _context.DeviceCategories.ToList();
+            ViewBag.category = category;
+        }
+
+        return View();
+    }
+
+   
    
 }

@@ -132,3 +132,4 @@
 /home/khanh-minh/Documents/RiderProjects/CodingPracticeProject/DemoProjects/Lab2_LeVoKhanhMinh/Lab2_LeVoKhanhMinh/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
 /home/khanh-minh/Documents/RiderProjects/CodingPracticeProject/DemoProjects/Lab2_LeVoKhanhMinh/Lab2_LeVoKhanhMinh/obj/Debug/net8.0/Lab2_LeVoKhanhMinh.csproj.AssemblyReference.cache
 /home/khanh-minh/Documents/RiderProjects/CodingPracticeProject/DemoProjects/Lab2_LeVoKhanhMinh/Lab2_LeVoKhanhMinh/obj/Debug/net8.0/Lab2_LeV.67926FEF.Up2Date
+/home/khanh-minh/Documents/RiderProjects/CodingPracticeProject/DemoProjects/Lab2_LeVoKhanhMinh/Lab2_LeVoKhanhMinh/obj/Debug/net8.0/Lab2_LeVoKhanhMinh.sourcelink.json

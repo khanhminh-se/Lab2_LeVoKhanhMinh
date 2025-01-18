@@ -29,8 +29,8 @@
                 </select>
             </div>
             <div class="mb-1">
-                <label class="form-label" asp-for="Status">Status: </label>
-                <select class="form-select">
+                <label class="form-label" >Status: </label>
+                <select class="form-select" asp-for="Status">
                     <option selected>Open this select Status</option>
                     @foreach (var status in ViewBag.Statuses as List<Status>)
                     {

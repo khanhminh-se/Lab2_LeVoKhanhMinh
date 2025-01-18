@@ -11,6 +11,7 @@ public class ApplicationDbContext: DbContext
     }
     public DbSet<DeviceCategory> DeviceCategories { get; set; }
     public DbSet<Device> Devices { get; set; }
+    public DbSet<User> Users { get; set; }
      
      protected override void OnModelCreating(ModelBuilder modelBuilder)
      {
@@ -19,7 +20,7 @@ public class ApplicationDbContext: DbContext
              .WithMany(c => c.Devices)       // Each DeviceCategory has many Devices
              .HasForeignKey(d => d.DeviceCategoryId);  // Reference the foreign key property, not d.DeviceCategory.Id
 
-         base.OnModelCreating(modelBuilder);
+
 
          base.OnModelCreating(modelBuilder);
      }

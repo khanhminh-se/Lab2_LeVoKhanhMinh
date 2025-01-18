@@ -1,0 +1,39 @@
+@model User
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+
+@{
+    ViewBag.Title = "Edit User";
+    Layout = "_Layout";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="container">
+    <form asp-controller="User" asp-action="Edit" method="post">
+        <div class="form-group">
+            <input type="hidden" class="form-control" id="Id" name="Id" value="@Model.Id">
+        </div>
+        <div class="form-group">
+            <label for="FullName">Full Name</label>
+            <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.FullName" required>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required>
+        </div>
+        <div class="form-group">
+            <label for="PhoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required>
+        </div>
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-success">Save Changes</button>
+            <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+

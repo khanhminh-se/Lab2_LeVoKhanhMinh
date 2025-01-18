@@ -75,6 +75,31 @@ namespace Lab2_LeVoKhanhMinh.Migrations
                     b.ToTable("DeviceCategories");
                 });
 
+            modelBuilder.Entity("Lab2_LeVoKhanhMinh.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Lab2_LeVoKhanhMinh.Models.Device", b =>
                 {
                     b.HasOne("Lab2_LeVoKhanhMinh.Models.DeviceCategory", "DeviceCategory")

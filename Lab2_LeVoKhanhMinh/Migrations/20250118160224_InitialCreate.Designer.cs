@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lab2_LeVoKhanhMinh.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250116153704_updateModel1")]
-    partial class updateModel1
+    [Migration("20250118160224_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,6 +76,31 @@ namespace Lab2_LeVoKhanhMinh.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("DeviceCategories");
+                });
+
+            modelBuilder.Entity("Lab2_LeVoKhanhMinh.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Lab2_LeVoKhanhMinh.Models.Device", b =>
