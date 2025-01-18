@@ -1,0 +1,26 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Add Category";
+    Layout = "_LayoutForAdmin";
+}
+
+<div class="container">
+    <h1>Add Device Category</h1>
+    <form  asp-controler="DeviceCategory" asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="mt-3">
+            <div class="mb-1">
+                <label class="form-label"> Category Title : </label>
+                <input type="text" class="form-control" id="categoryTitle" name="CategoryTitle" />
+            </div>
+            <div class="mb-3">
+                <label for="imageFile" class="form-label">Category Image</label>
+                <img src="" style="display:none" class="mb-2" alt="" id="show-image"/>
+                <input class="form-control" id="imageFile" type="file" onchange="getFile()" name="ImageFile">
+            </div>
+            <div class="mb-3">
+                <button  class="btn  btn-primary"  type="submit">Add</button>
+            </div>
+        </div>
+    </form>
+</div>

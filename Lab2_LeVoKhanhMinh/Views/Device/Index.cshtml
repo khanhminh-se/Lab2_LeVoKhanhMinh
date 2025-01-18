@@ -1,0 +1,49 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Device";
+    Layout = "_LayoutForAdmin";
+}
+<h1>Devices</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Device Name</th>
+        <th scope="col">Device Code</th>
+        <th scope="col">Device Category</th>
+        <th scope="col">Status</th>
+        <th scope="col">Date Of Entry</th>
+        <th scope="col">Function</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+     @foreach (var device in ViewBag.devices)
+     {
+         <tr>
+             <th scope="row">@device?.Id</th>
+             <td>@device?.DeviceName</td>
+             <td>
+                 @device?.DeviceCode
+             </td>
+             <td>
+                 @device?.DeviceCategory.CategoryTitle
+             </td>
+             <td>
+                 @device.Status.ToString()
+             </td>
+             <td>
+                 @device.DateOfEntry.ToString("dd/M/yyyy")
+             </td>
+             <td>
+                 <button class="btn btn-primary" onclick="handleEditDeviceCategory(@device.Id)">Edit</button>
+                 <button class="btn btn-danger" onclick="handleDeleteDeviceCategory(@device.Id)">Delete</button>
+             </td>
+         </tr>
+     }
+     
+  
+
+    </tbody>
+</table>

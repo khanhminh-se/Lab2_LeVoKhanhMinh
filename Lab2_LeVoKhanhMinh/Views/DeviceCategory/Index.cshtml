@@ -1,0 +1,35 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Device Management System";
+    Layout = "_LayoutForAdmin";
+}
+
+<h1>Device Category</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Category Title</th>
+        <th scope="col">Category Image</th>
+        <th scope="col">Function</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var category in Model)
+    {
+        <tr>
+            <th scope="row">@category.Id</th>
+            <td>@category.CategoryTitle</td>
+            <td>
+                <img src="@category.imageUrl" alt="@category.CategoryTitle" style="width: 50px; height: 50px;"/>
+            </td>
+            <td>
+                <button class="btn btn-primary" onclick="handleEditDeviceCategory(@category.Id)">Edit</button>
+                <button class="btn btn-danger" onclick="handleDeleteDeviceCategory(@category.Id)">Delete</button>
+            </td>
+        </tr>
+    }
+
+    </tbody>
+</table>
